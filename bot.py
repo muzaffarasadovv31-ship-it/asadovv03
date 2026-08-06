@@ -12,7 +12,9 @@ from aiogram.enums import ParseMode
 
 import yt_dlp
 
-BOT_TOKEN = "SIZNING_BOT_TOKENINGIZ"
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
+
+
 DOWNLOAD_DIR = "downloads"
 
 os.makedirs(DOWNLOAD_DIR, exist_ok=True)
