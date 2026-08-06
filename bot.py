@@ -46,11 +46,13 @@ async def download_instagram_video(message: Message):
     file_id = str(uuid.uuid4())
     output_path = os.path.join(DOWNLOAD_DIR, f"{file_id}.mp4")
 
-    ydl_opts = {
-        "outtmpl": output_path,
-        "format": "mp4/best",
-        "quiet": True,
-        "no_warnings": True,
+ydl_opts = {
+    "outtmpl": output_path,
+    "format": "mp4/best",
+    "quiet": True,
+    "no_warnings": True,
+    "cookiefile": "cookies.txt",
+}
     }
 
     try:
